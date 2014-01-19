@@ -13,7 +13,7 @@ public class EntityPlayer extends Entity {
 		this.name = name;
 		this.width = width;
 		this.height = height;
-		spawn(400, 100);
+		spawn(160, 320);
 	}
 	
 	public void spawn(int x, int y){
@@ -22,6 +22,7 @@ public class EntityPlayer extends Entity {
 	}
 	
 	public void render(float delta, OrthographicCamera camera, SpriteBatch batch){
+		batch.setProjectionMatrix(camera.combined);
 		if(direction == 0)
 		{
 			batch.draw(sprite_left, x, y, width, height);
