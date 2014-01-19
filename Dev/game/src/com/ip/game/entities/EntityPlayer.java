@@ -13,7 +13,7 @@ public class EntityPlayer extends Entity {
 		this.name = name;
 		this.width = width;
 		this.height = height;
-		spawn(160, 320);
+		spawn(20, 190);
 	}
 	
 	public void spawn(int x, int y){
