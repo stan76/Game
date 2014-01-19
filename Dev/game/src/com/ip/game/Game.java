@@ -3,7 +3,11 @@ package com.ip.game;
 
 public class Game extends com.badlogic.gdx.Game {
 
-	
+	public static final String NAME = "Game IP";
+	public static final String VERSION = "V1";
+	public static final int SCALE = 2;
+	public static final int WIDTH = 480;
+	public static final int HEIGHT = WIDTH * 3 / 4;
 	public void create() {		
 		
 	}
