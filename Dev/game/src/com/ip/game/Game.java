@@ -1,7 +1,12 @@
 package com.ip.game;
 
-import com.ip.gui.GuiIngame;
-import com.ip.gui.GuiScreen;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.utils.Array;
+import com.ip.game.entities.EntityPlayer;
+import com.ip.game.entities.GameObject;
+import com.ip.game.gui.GuiIngame;
+import com.ip.game.gui.GuiScreen;
+import com.ip.game.utils.KeyListener;
 
 
 public class Game extends com.badlogic.gdx.Game {
@@ -11,13 +16,34 @@ public class Game extends com.badlogic.gdx.Game {
 	public static final int SCALE = 2;
 	public static final int WIDTH = 800;
 	public static final int HEIGHT = WIDTH * 3 / 4;
+	
+	private static Game instance;
+	private KeyListener keyListener;
+	
+	//SCREEN
 	private GuiIngame guiIg;
+	
+	//GAME OBJECTS
+	private Array<GameObject> gameObject = new Array<GameObject>();
+	private EntityPlayer player;
+	
+	public Game(){
+		instance = this;
+	}
+	
 	public void create() {
+		keyListener = new KeyListener();
+		Gdx.input.setInputProcessor(keyListener);
+		
 		guiIg = GuiScreen.GUI_INGAME;
 		super.setScreen(guiIg);
+		
+		player = new EntityPlayer("Joueur 1", 64, 64);
+		gameObject.add(player);
 	}
 
-	public void render() {		
+	public void render() {
+		keyListener.tick();
 		super.render();
 	}
 
@@ -37,6 +63,23 @@ public class Game extends com.badlogic.gdx.Game {
 	public void resume() {
 		super.resume();
 	}
+	
+	public void quit(){
+		Gdx.app.exit();
+	}
+	
+	public Array<GameObject> getGameObjects() {
+		return gameObject;
+	}
+	
+	public EntityPlayer getPlayer(){
+		return player;
+	}
+	
+	public static Game getInstance(){
+		return instance;
+	}
+	
 	public static boolean needsOpenGL20() {
 		return true;
 	}

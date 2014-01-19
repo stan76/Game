@@ -1,4 +1,4 @@
-package com.ip.gui;
+package com.ip.game.gui;
 
 import com.badlogic.gdx.Screen;
 

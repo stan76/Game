@@ -1,4 +1,4 @@
-package com.ip.gui;
+package com.ip.game.gui;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.ip.game.Game;
+import com.ip.game.entities.GameObject;
 
 public class GuiIngame extends GuiScreen {
 
@@ -26,7 +27,11 @@ public class GuiIngame extends GuiScreen {
 
 	public void render(float delta) {
 		batch.begin();
-			batch.draw(bg, 0, 0, Game.WIDTH, Game.HEIGHT);
+			batch.draw(bg, 0, 0, Game.WIDTH, Game.HEIGHT); //BG
+			for(GameObject o : Game.getInstance().getGameObjects()) 
+			{
+				o.render(delta, camera, batch);
+			}
 		batch.end();
 		
 	}
