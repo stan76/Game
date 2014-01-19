@@ -23,7 +23,7 @@ public abstract class Entity implements GameObject {
 	public abstract void render(float delta, OrthographicCamera camera, SpriteBatch batch);
 	
 	public void move(float dx){
-		x += dx + Gdx.graphics.getDeltaTime();
+		x += (dx + Gdx.graphics.getDeltaTime()) / 3;
 		if(dx > 1)
 		{
 			direction = 1;
