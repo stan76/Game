@@ -5,10 +5,13 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputProcessor;
 import com.ip.game.Game;
 import com.ip.game.entities.EntityPlayer;
+import com.badlogic.gdx.math.Vector2;
+
+
 
 public class KeyListener implements InputProcessor {
 
-
+	
 	public boolean keyDown(int keycode) {
 		switch (keycode) {
 		case Keys.ESCAPE:
@@ -31,6 +34,12 @@ public class KeyListener implements InputProcessor {
 			Game.getInstance().getPlayer().move(0);
 			break;
 		case Keys.D:
+			Game.getInstance().getPlayer().move(0);
+			break;
+		case Keys.UP:
+			Game.getInstance().getPlayer().move(0);
+			break;
+		case Keys.Z:
 			Game.getInstance().getPlayer().move(0);
 			break;
 		}
@@ -76,12 +85,12 @@ public class KeyListener implements InputProcessor {
 	public void tick(){
 		if(Gdx.input.isKeyPressed(Keys.LEFT) || Gdx.input.isKeyPressed(Keys.Q)){
 			EntityPlayer p = Game.getInstance().getPlayer();
-			p.move(-10);
+			p.move(-9);
 		}
 		if(Gdx.input.isKeyPressed(Keys.RIGHT) || Gdx.input.isKeyPressed(Keys.D)){
 			EntityPlayer p = Game.getInstance().getPlayer();
 			p.move(10);
 		}
 	}
-
+	
 }
