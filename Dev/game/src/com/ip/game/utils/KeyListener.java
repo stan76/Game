@@ -5,7 +5,6 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputProcessor;
 import com.ip.game.Game;
 import com.ip.game.entities.EntityPlayer;
-import com.badlogic.gdx.math.Vector2;
 
 
 
