@@ -22,24 +22,25 @@ public class KeyListener implements InputProcessor {
 
 
 	public boolean keyUp(int keycode) {
+		//Le switch permet d'arrêter le joueur quand une touche est lâchée
 		switch (keycode) {
 		case Keys.LEFT:
-			Game.getInstance().getPlayer().move(0);
+			Game.getInstance().getPlayer().move(0,0);
 			break;
 		case Keys.Q:
-			Game.getInstance().getPlayer().move(0);
+			Game.getInstance().getPlayer().move(0,0);
 			break;
 		case Keys.RIGHT:
-			Game.getInstance().getPlayer().move(0);
+			Game.getInstance().getPlayer().move(0,0);
 			break;
 		case Keys.D:
-			Game.getInstance().getPlayer().move(0);
+			Game.getInstance().getPlayer().move(0,0);
 			break;
 		case Keys.UP:
-			Game.getInstance().getPlayer().move(0);
+			Game.getInstance().getPlayer().move(0,0);
 			break;
 		case Keys.Z:
-			Game.getInstance().getPlayer().move(0);
+			Game.getInstance().getPlayer().move(0,0);
 			break;
 		}
 		return false;
@@ -84,11 +85,15 @@ public class KeyListener implements InputProcessor {
 	public void tick(){
 		if(Gdx.input.isKeyPressed(Keys.LEFT) || Gdx.input.isKeyPressed(Keys.Q)){
 			EntityPlayer p = Game.getInstance().getPlayer();
-			p.move(-9);
+			p.move(-10,0);
 		}
 		if(Gdx.input.isKeyPressed(Keys.RIGHT) || Gdx.input.isKeyPressed(Keys.D)){
 			EntityPlayer p = Game.getInstance().getPlayer();
-			p.move(10);
+			p.move(10,0);
+		}
+		if(Gdx.input.isKeyPressed(Keys.UP) || Gdx.input.isKeyPressed(Keys.Z)){
+			EntityPlayer p = Game.getInstance().getPlayer();
+			p.move(0,10);
 		}
 	}
 	
