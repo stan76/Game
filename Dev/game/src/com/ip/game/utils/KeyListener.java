@@ -85,7 +85,7 @@ public class KeyListener implements InputProcessor {
 	public void tick(){
 		if(Gdx.input.isKeyPressed(Keys.LEFT) || Gdx.input.isKeyPressed(Keys.Q)){
 			EntityPlayer p = Game.getInstance().getPlayer();
-			p.move(-10,0);
+			p.move(-9,0);
 		}
 		if(Gdx.input.isKeyPressed(Keys.RIGHT) || Gdx.input.isKeyPressed(Keys.D)){
 			EntityPlayer p = Game.getInstance().getPlayer();
