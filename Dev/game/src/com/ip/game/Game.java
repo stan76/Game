@@ -11,6 +11,8 @@ import com.ip.game.world.Region;
 
 //CLASS PRINCIPAL
 public class Game extends com.badlogic.gdx.Game {
+	// constant useful for logging
+    public static final String LOG = Game.class.getSimpleName();
 
 	//Déclaration des variables d'infos du jeu et de la fenêtre
 	public static final String NAME = "Game IP";

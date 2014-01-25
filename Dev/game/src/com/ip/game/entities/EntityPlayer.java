@@ -1,11 +1,14 @@
 package com.ip.game.entities;
 
+
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 //Classe des joueurs qui étend la classe qui contient le positionnement des différents objets du jeu
 public class EntityPlayer extends Entity {
+
 	//Constructeur de la classe 
 	public EntityPlayer(String name, int width, int height){
 		//Appel du constructeur de la classe étendue. Les paramètres sont nom du joueur, et les deux images du joueur.
@@ -17,11 +20,14 @@ public class EntityPlayer extends Entity {
 		//Endroit de spawn du joueur
 		spawn(20, 190);
 	}
-	
+	//////////////////////////////
+
+	///////////////////////////////
 	public void spawn(int x, int y){
 		this.x = x;
 		this.y = y;
 	}
+	
 	
 	public void render(float delta, OrthographicCamera camera, SpriteBatch batch){
 		//Nouvel affichage
@@ -36,5 +42,7 @@ public class EntityPlayer extends Entity {
 		{
 			batch.draw(sprite_right, x, y, width, height);
 		}
+		
 	}
+
 }
