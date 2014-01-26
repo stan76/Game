@@ -12,32 +12,6 @@ import com.ip.game.entities.EntityPlayer;
 
 
 public class KeyListener implements InputProcessor {
-
-	private Vector2 position;
-	private void moveShip(
-		    float delta )
-		{
-		    // set the position vector to the ship's current position
-		    position.set( x, y );
-		 
-		    // move UP or DOWN
-		    if( Gdx.input.isKeyPressed( Input.Keys.UP ) ) {
-		        position.add( 0, MAX_VERTICAL_SPEED * delta );
-		    } else if( Gdx.input.isKeyPressed( Input.Keys.DOWN ) ) {
-		        position.sub( 0, MAX_VERTICAL_SPEED * delta );
-		    }
-		 
-		    // move LEFT or RIGHT
-		    if( Gdx.input.isKeyPressed( Input.Keys.LEFT ) ) {
-		        position.sub( MAX_HORIZONTAL_SPEED * delta, 0 );
-		    } else if( Gdx.input.isKeyPressed( Input.Keys.RIGHT ) ) {
-		        position.add( MAX_HORIZONTAL_SPEED * delta, 0 );
-		    }
-		 
-		    // update the ship's actual position
-		    x = position.x;
-		    y = position.y;
-		}
 	
 	public boolean keyDown(int keycode) {
 		switch (keycode) {
