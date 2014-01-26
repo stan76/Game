@@ -1,0 +1,2 @@
+Get Started (http://libgdx.badlogicgames.com/documentation.html#gettingstarted)
+scène 2D tutorial (http://theinvader360.blogspot.co.uk/2013/05/street-race-swipe-libgdx-scene2d.html)
