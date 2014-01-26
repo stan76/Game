@@ -1,10 +1,8 @@
 package com.ip.game.utils;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputProcessor;
-import com.badlogic.gdx.math.Vector2;
 import com.ip.game.Game;
 import com.ip.game.entities.EntityPlayer;
 
